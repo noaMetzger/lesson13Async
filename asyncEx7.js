@@ -5,7 +5,8 @@ async function getPosts(){
     
 
 
-    posts.map(post=>{
+
+    posts.forEach(post=>{
         let li=document.createElement("li")
         li.textContent=post.title
         li.id=post.id
@@ -34,7 +35,7 @@ async function showCom(id){
     let thisComment=await result1.json()
 
 
-    thisComment.map(comment=>{
+    thisComment.forEach(comment=>{
         let li=document.createElement("li")
         li.textContent=comment.body
         li.style.color='green'

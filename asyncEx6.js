@@ -9,7 +9,7 @@ async function getAlbum(){
     let data1=await result1.json()
 
 
-    data.map(album=>{
+    data.forEach(album=>{
         let li=document.createElement("li")
         li.textContent=album.title
         li.id=album.id
@@ -32,7 +32,7 @@ async function showDet(id){
     let result=await fetch(url)
     let data=await result.json()
     console.log(data)
-    data.map(photo=>{
+    data.forEach(photo=>{
         let li=document.createElement("li")
         li.textContent=photo.title
         li.style.color='red'
